@@ -7,62 +7,54 @@ import Emergencias from './Emergencias'
 
 
 
-export default function Home(navigation){
+export default function Home(props){
     return(
         <>
             <View style={styles.container}>
                 <Text style={styles.menuText}>Menu</Text>
 
-                <TouchableOpacity style={[styles.buttom, styles.buttom_morado]} >
-                    <Icon style={styles.iconContainerStyle } name="heart" size={30} color="#FFFFFF" />
-                    <Text style={styles.text }>RED NARANJA</Text>
-                </TouchableOpacity>   
-
-                <TouchableOpacity style={[styles.buttom, styles.buttom_lila]} >
-                    <Icon style={styles.iconContainerStyle } name="ambulance" size={30} color="#FFFFFF" />
-                    <Text style={styles.text }>EMERGENCIAS</Text>
-                </TouchableOpacity>
-
-                <TouchableOpacity style={[styles.buttom, styles.buttom_verde]} >
-                    <Icon style={styles.iconContainerStyle } name="phone" size={30} color="#FFFFFF" />
-                    <Text style={styles.text }>LINEA SIN VIOLENCIA</Text>
-                </TouchableOpacity>
-
-                <TouchableOpacity style={[styles.buttom, styles.buttom_morado]} >
-                    <Icon style={styles.iconContainerStyle } name="map" size={30} color="#FFFFFF" />
-                    <Text style={styles.text }>ESPACIOS NARANJA</Text>
-                </TouchableOpacity>
-
-                <TouchableOpacity style={[styles.buttom, styles.buttom_lila]} >
-                    <Icon style={styles.iconContainerStyle } name="bullhorn" size={30} color="#FFFFFF" />
-                    <Text style={styles.text }>CAMPAÑAS DE PREVENCION</Text>
-                </TouchableOpacity>
-
-                <TouchableOpacity style={[styles.buttom, styles.buttom_verde]} >
-                    <Icon style={styles.iconContainerStyle } name="alert-circle" size={30} color="#FFFFFF" />
-                    <Text style={styles.text }>ALERTA DE VIOLENCIA</Text>
-                </TouchableOpacity> 
-
-                <TouchableOpacity style={[styles.buttom, styles.buttom_morado]} >
-                    <Icon style={styles.iconContainerStyle } name="alert" size={30} color="#FFFFFF" />
-                    <Text style={styles.text }>PERSONAS DESAPARECIDAS</Text>
-                </TouchableOpacity>   
-
-                <TouchableOpacity style={[styles.buttom, styles.buttom_lila]} >
-                    <Icon style={styles.iconContainerStyle } name="file" size={30} color="#FFFFFF" />
-                    <Text style={styles.text }>INFOGRAFIAS</Text>
-                </TouchableOpacity>      
-                
-                <TouchableOpacity style={[styles.buttom, styles.buttom_verde]} >
-                    <Icon style={styles.iconContainerStyle } name="video" size={30} color="#FFFFFF" />
-                    <Text style={styles.text }>VIDEOCONFERENCIAS</Text>
-                </TouchableOpacity>
+                <Button  
+                    title={"RED NARANJA"} icon={"heart"} buttonStyle={styles.buttom_morado}
+                /> 
+                <Button  
+                    title={"EMERGENCIAS"} icon={"ambulance"} buttonStyle={styles.buttom_lila}
+                /> 
+                <Button  
+                    title={"LINEA SIN VIOLENCIA"} icon={"phone"} buttonStyle={styles.buttom_verde}
+                /> 
+                <Button  
+                    title={"ESPACIOS NARANJA"} icon={"map"} buttonStyle={styles.buttom_morado}
+                /> 
+                <Button  
+                    title={"CAMPAÑAS DE PREVENCION"} icon={"bullhorn"} buttonStyle={styles.buttom_lila}
+                /> 
+                <Button  
+                    title={"ALERTA DE VIOLENCIA"} icon={"alert-circle"} buttonStyle={styles.buttom_verde}
+                /> 
+                <Button  
+                    title={"PERSONAS DESAPARECIDAS"} icon={"alert"} buttonStyle={styles.buttom_morado}
+                /> 
+                <Button  
+                    title={"INFOGRAFIAS"} icon={"file"} buttonStyle={styles.buttom_lila}
+                /> 
+                <Button  
+                    title={"VIDEOCONFERENCIAS"} icon={"video"} buttonStyle={styles.buttom_verde}
+                /> 
             </View>
         </>
     );
 }
 
+function Button (props){
+    const {title, icon, buttonStyle } = props; 
 
+    return (
+    <TouchableOpacity style={[styles.buttom, buttonStyle]} >
+        <Icon style={styles.iconContainerStyle } name={icon}  size={30} color="#FFFFFF" />
+        <Text style={styles.text }>{title}</Text>
+    </TouchableOpacity>
+    )
+}
 
 const styles = StyleSheet.create({
     buttom: {
