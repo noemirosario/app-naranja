@@ -5,5 +5,6 @@ export default {
     
     COLOR_AMARILLO: '#FDB44B',
     COLOR_BLANCO: '#FFF',
-
+    COLOR_AMARILLO_PASTEL: '#FBE7C6',
+    COLOR_ROSA_PASTEL: '#F7CAC9',
 }
