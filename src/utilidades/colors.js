@@ -1,10 +1,14 @@
 export default {
-    COLOR_MORADO: '#702283',
-    COLOR_LILA: '#962071',
+    COLOR_MORADO: '#FF6D60',
+    COLOR_LILA: '#F7D060',
     COLOR_VERDE: '#76B39D',
     
-    COLOR_AMARILLO: '#FDB44B',
+    COLOR_AMARILLO: '#F3E99F',
     COLOR_BLANCO: '#FFF',
-    COLOR_AMARILLO_PASTEL: '#FBE7C6',
+    COLOR_AMARILLO_PASTEL: '#FFF9DE',
     COLOR_ROSA_PASTEL: '#F7CAC9',
 }
+
+// orden
+
+// lila, amarillo

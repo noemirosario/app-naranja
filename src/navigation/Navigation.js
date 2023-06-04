@@ -2,7 +2,6 @@ import React from "react";
 import {createStackNavigator} from "@react-navigation/stack";
 import colors from '../utilidades/colors'
 
-
 import Home from "../screens/Home";
 import RedNaranja from "../screens/RedNaranja";
 import Emergencias from "../screens/Emergencias";
